@@ -21,7 +21,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//} >> $GITHUB_ENV
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
       # Runs a set of commands using the runners shell
       - name: Publish Helm Chart
