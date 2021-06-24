@@ -26,7 +26,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Publish Helm Chart
         env:
-            CHART_VERSION: ${{steps.get_version.outputs.VERSION}}
-            CI_PUBLISH_KEY: ${{secrets.CI_PUBLISH_KEY}}
+            CHART_VERSION: ${{ steps.get_version.outputs.VERSION }}
+            CI_PUBLISH_KEY: ${{ secrets.CI_PUBLISH_KEY }}
         run: |
           ./deploy-helm-chart
