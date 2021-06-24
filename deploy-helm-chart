@@ -50,7 +50,8 @@ export
 
 if [ "$CI_PUBLISH_KEY" != "" ]; then
   mkdir -p ~/.ssh
-  echo $CI_PUBLISH_KEY > ~/.ssh/id_rsa 600
+  echo $CI_PUBLISH_KEY > ~/.ssh/id_rsa
+  chmod 600 ~/.ssh/id_rsa
   cat > ~/.ssh/config <<EOF
 Host *
   IdentitiesOnly yes
