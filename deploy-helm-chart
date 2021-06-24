@@ -69,5 +69,7 @@ EOF
 fi
 
 # publish chart
-info "[Chartpress] Build package ${CHART_NAME} version: $CI_COMMIT_TAG "
+info "[Chartpress] Build package ${CHART_NAME} version: ${CHART_VERSION}"
+chartpress --tag $CI_COMMIT_TAG --publish-chart ${CHART_VERSION} 
 
+popd
