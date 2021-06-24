@@ -20,5 +20,5 @@
 .idea/
 *.tmproj
 .vscode/
-aws-ecr-credential/*
+aws-ecr-credential*
 deploy-helm-chart
